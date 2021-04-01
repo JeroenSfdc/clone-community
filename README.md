@@ -25,8 +25,8 @@ Copy all the experience bundle folders from the Community you'd want to clone. S
 <summary>Update the UUIDs in the `JSON` files</summary>
 The Experience Bundle's folders files are knitted together using UUID. Because these are the ones you cloned, they need to be changed. The most simplistic approach would be to replace all UUIDs with a different value. Say we just change the last 6 characters to `ffffff` (or whatever sequence you think of, doesn't really matter). 
   
-  1. `cd ./experiences/<your DXP site>`
-  2. `egrep -ro '[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}' . > ../uuids.csv`
+- `cd ./experiences/<your DXP site>`
+- `egrep -ro '[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}' . > ../uuids.csv`
 
 Which will fetch UUIDs into a file which is saved in `../uuids.csv`
 </details>
@@ -35,10 +35,10 @@ Which will fetch UUIDs into a file which is saved in `../uuids.csv`
 <summary>Create a series of `sed` commands to update the UUIDs</summary>
 Using Excel or Google Sheet create a list of `sed` commands.
   
-**Column A** contains the filename including path (from the previous step)
-**Column B** contains the original UUID found (from the previous step)
-**Column C** can be a formula `=CONCAT(LEFT(B1;32);"ffff")`
-**Column D** can be a formula `=CONCAT("sed -i'' -e ";"'s/";B1;"/";C1;"/g'";" ";A1)`
+- **Column A** contains the filename including path (from the previous step)
+- **Column B** contains the original UUID found (from the previous step)
+- **Column C** can be a formula `=CONCAT(LEFT(B1;32);"ffff")`
+- **Column D** can be a formula `=CONCAT("sed -i'' -e ";"'s/";B1;"/";C1;"/g'";" ";A1)`
 </details>
 
 <details>
@@ -49,8 +49,8 @@ It can take a while to execute, depending on the size of your community.
 
 <details>
 <summary>Delete the back-up files created by `sed`</summary>
-`cd ./experiences/<your DXP site>`
-`find . -name '*.json-e' -delete`
+- `cd ./experiences/<your DXP site>`
+- `find . -name '*.json-e' -delete`
 </details>
 
 <details>
