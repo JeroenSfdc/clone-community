@@ -1,8 +1,29 @@
-Cloning a DXP Site, we can leverage the experienceBundle Metadata API. By retrieving an existing DXP site, we cannot simply rename and deploy it. There's a bit more to it.
+At time it can be useful to clone a Community (DXP). If you don't want to fool around with the existing community, just clone it on the same or another sandbox.
+The Experience Bundle API can help with this. But there's a bit of work to it. Something which of course could be automated with a funky `sfdx cli` plug-in command. For now just the manual steps.
+
+<details>
+<summaryCreate the new Community</summary>
 
 First of all to create a new DXP Site, we either do it manually through Setup or instead use sfdx force:communicate:create. Beware the command runs in the background for a bit, so you'd have to wait a minute or two.
 
-sfdx force:community:create -n 'MyClonedDXP' -p 'expbundle-abinbev-ei-crm.cs105.force.com' -t 'Customer Service' -d 'A Cloned community'
+sfdx force:community:create -n 'MyClonedDXP' -p 'expbundle-xxxx.csxxx.force.com' -t 'Customer Service' -d 'A Cloned community'
+</details>
+
+<details>
+<summary>Retrieve the community</summary>
+
+
+</details>
+
+
+
+
+
+
+
+
+
+
 
 Next, copy the complete experience bundle to a folder matching your created DXP. Be sure to append the '1' behind the name of the folder. And make sure you update the name of the .site-metadata.xml file as well.
 
