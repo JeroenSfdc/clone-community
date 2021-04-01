@@ -1,5 +1,5 @@
 At time it can be useful to clone a Community (DXP). If you don't want to fool around with the existing community, just clone it on the same or another sandbox.
-The Experience Bundle API can help with this. But there's a bit of work to it. Something which of course could be automated with a funky `sfdx cli` plug-in command. For now just the manual steps.
+The Experience Bundle API can help with this. But there's a bit of work to it. Something which of course could be automated with a funky `sfdx cli` plug-in command. For now just the manual steps. 
 
 <details>
 <summary>Create the new Community</summary>
@@ -25,7 +25,7 @@ Copy all the experience bundle folders from the Community you'd want to clone. S
 <summary>Update the UUIDs in the `JSON` files</summary>
 The Experience Bundle's folders files are knitted together using UUID. Because these are the ones you cloned, they need to be changed. The most simplistic approach would be to replace all UUIDs with a different value. Say we just change the last 6 characters to `ffffff` (or whatever sequence you think of, doesn't really matter). 
   
-- `cd ./experiences/<your DXP site>`
+- `cd ./experiences/MyClonedDXP`
 - `egrep -ro '[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}' . > ../uuids.csv`
 
 Which will fetch UUIDs into a file which is saved in `../uuids.csv`
@@ -50,13 +50,13 @@ It can take a while to execute, depending on the size of your community.
 <details>
 <summary>Delete the back-up files created by sed</summary>
 
-`cd ./experiences/<your DXP site>`
+`cd ./experiences/MyClonedDXP`
 `find . -name '*.json-e' -delete`
 </details>
 
 <details>
 <summary>Deploy the Community</summary>
-Deploy the Experience Bundle.
+Deploy the `MyClonedDXP` Experience Bundle.
 </details>
 
 <details>
