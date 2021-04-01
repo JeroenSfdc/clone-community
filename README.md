@@ -60,7 +60,7 @@ Deploy the Experience Bundle.
 
 <details>
 <summary>Publish the Community</summary>
-`sfdx force:community:publish -n /'<your DXP site>/'`
+`sfdx force:community:publish -n \'<your DXP site>\'`
 </details>
 
 Done!
