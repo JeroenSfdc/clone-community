@@ -42,15 +42,16 @@ Using Excel or Google Sheet create a list of `sed` commands.
 </details>
 
 <details>
-<summary>Execute the `sed` commands</summary>
-Just copy the contents of your **Column D** and paste them into your terminal. 
+<summary>Execute the sed commands</summary>  
+Just copy the contents of your **Column D** and paste them into your terminal.
 It can take a while to execute, depending on the size of your community. 
 </details>
 
 <details>
-<summary>Delete the back-up files created by `sed`</summary>
-- `cd ./experiences/<your DXP site>`
-- `find . -name '*.json-e' -delete`
+<summary>Delete the back-up files created by sed</summary>
+
+cd ./experiences/<your DXP site>
+find . -name '*.json-e' -delete
 </details>
 
 <details>
@@ -60,7 +61,7 @@ Deploy the Experience Bundle.
 
 <details>
 <summary>Publish the Community</summary>
-`sfdx force:community:publish -n \'<your DXP site>\'`
+sfdx force:community:publish -n '<your DXP site>'
 </details>
 
 Done!
