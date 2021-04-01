@@ -50,8 +50,8 @@ It can take a while to execute, depending on the size of your community.
 <details>
 <summary>Delete the back-up files created by sed</summary>
 
-cd ./experiences/<your DXP site>
-find . -name '*.json-e' -delete
+`cd ./experiences/<your DXP site>`
+`find . -name '*.json-e' -delete`
 </details>
 
 <details>
