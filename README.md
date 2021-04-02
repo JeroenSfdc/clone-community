@@ -1,5 +1,5 @@
 At time it can be useful to clone a Community (DXP). If you don't want to fool around with the existing community, just clone it on the same or another sandbox.
-The Experience Bundle API can help with this. But there's a bit of work to it. Something which of course could be automated with a funky `sfdx cli` plug-in command. For now just the manual steps. 
+The Experience Bundle API can help with this. But there's a bit of work to it. Something which of course could be automated with a more complete shell script or funky `sfdx cli` plug-in command. For now just the manual steps. 
 
 <details>
 <summary>Create the new Community</summary>
